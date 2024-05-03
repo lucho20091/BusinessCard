@@ -1,0 +1,89 @@
+body {
+    margin: 20px;
+    font-family: 'Times New Roman', serif;
+}
+
+.avatar {
+    width: 150px;
+}
+.container{
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: move 10s steps(4) 0s ;
+
+}
+.card {
+    width: 400px;
+    height: 150px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    background: #1E121E;
+    border-bottom: 8px solid #0063B2FF;
+
+    /* 
+    Challenge:
+    Add colors to the card according to the design.
+    black - #2b2839 (the text color)
+    blue - #ddebf8
+    purple - #d8cefe
+    */
+    
+}
+
+.text{
+    text-align: left;
+}
+.text h3{
+    margin-bottom: 2px;
+}
+.text p{
+    font-weight: bold;
+    padding-top: 0;
+    margin-top: 0;
+}
+
+/*translate (izquierda derecha y arriba abajo) 
+translate(num1, num2)
+num1 = 0px es la posicion inicial
+num2 = 0px es la posicion inicial
+num1 = -200px es a la izquierda
+num2 = - 200px es arriba
+num1 = 200px es a la derecha
+num2 = 200px es abajo
+el primer valor en negativo es a la izquierda
+el primer valor en positivo es a la derecha
+el segundo valor en negativo es arriba
+el segundo valor en negativo es abajo
+
+*/
+@keyframes move{
+    from{
+        transform: translate(0px, 0px);
+    }
+    12%{
+        transform: translate(-20px, 0px);
+    }
+    24%{
+        transform: translate(-20px, -20px);
+    }
+    40%{
+        transform: translate(20px, -20px);
+    }
+    60%{
+        transform: translate(20px, 20px);
+    }
+    70%{
+        transform: translate(-20px, 20px);
+    }
+    80%{
+        transform: translate(-20px, 0px);
+    }
+    100%{
+        transform: translate(0px, 0px);
+    }
+    
+}
